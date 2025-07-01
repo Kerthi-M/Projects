@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score
 
-df = pd.read_csv("training.1600000.processed.noemoticon.csv", encoding='latin-1', header=None)
+df = pd.read_csv("data/training.1600000.processed.noemoticon.csv", encoding='latin-1', header=None)
 df = df[[0, 5]]
 df.columns = ['label', 'tweet']
 df['label'] = df['label'].apply(lambda x: 1 if x == 4 else 0)
